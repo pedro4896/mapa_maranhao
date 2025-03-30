@@ -1,0 +1,20 @@
+/*Limpar formatações padrao*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 1.2em;
+	font-family: georgia, Helvetica, "Trebuchet MS", sans-serif;
+	background: #050609;
+	font-weight: bold;
+}
+
+/*
+**** Formatacoes gerais ****
+*/
+
+area:hover{
+	outline: 1px solid black;
+}
