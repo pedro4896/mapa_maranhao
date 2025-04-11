@@ -1,0 +1,38 @@
+.str0 {stroke:#72706F;stroke-width:76;stroke-linecap:round;stroke-linejoin:round}
+.str4 {stroke:#C2C1C1;stroke-width:76}
+.str2 {stroke:#131516;stroke-width:76;stroke-linecap:round;stroke-linejoin:round}
+.str5 {stroke:#D82B40;stroke-width:76}
+.str1 {stroke:#72706F;stroke-width:353;stroke-linecap:round;stroke-linejoin:round}
+.str3 {stroke:#131516;stroke-width:353;stroke-linecap:round;stroke-linejoin:round}
+.str7 {stroke:#1F1A17;stroke-width:706}
+.str6 {stroke:#D82B40;stroke-width:1058}
+.fil3 {fill:none}
+.fil4 {fill:#FFFFFF}
+.fil0 {fill:#9DBDDD}
+.fil1 {fill:#EEDDB3}
+.fil2 {fill:#F6EAD9}
+.fil6 {fill:#D82B40}
+.fil5 {fill:#ECECEB}
+
+.clickable-municipality {
+    fill:#F6EAD9;
+    transition: fill 0.3s;
+    cursor: pointer;
+}
+
+.clickable-municipality:hover {
+    fill: rgb(157, 222, 151);
+}
+
+#tooltip {
+	position: absolute;
+	background-color: #1e1e1e;
+	color: #fff;
+	padding: 6px 10px;
+	border-radius: 6px;
+	font-size: 14px;
+	white-space: nowrap;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
