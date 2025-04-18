@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'riffic';
+    src: url('../font/riffic/RifficFree-Bold.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    background-color: #c5bb64;
+    color: #2A4562;
+    font-family: 'riffic', sans-serif;
+    padding-top: 1vw;
+}
+
+#ifpe {
+    display: flex;
+    align-items: center;
+    margin-left: 9vh;
+
+    & #texto {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    & #logo {
+        & img {
+            width: 7vh;
+            filter: drop-shadow(2px 2px 2px black);
+        }
+    }
+}
+
+#detalhes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    margin-left: 10vh;
+    margin-bottom: 5vh;
+
+    & #descricao {
+        width: 40%;
+        font-size: large;
+    }
+
+    & img {
+        margin-right: 3vw;
+    }
+}
+
+#pontos-turisticos {
+    background-color: #2A4562;
+    color: #c5bb64;
+    padding-top: 5vh;
+    padding-left: 10vh;
+
+    h1 {
+        filter: drop-shadow(2px 2px 2px black);
+    }
+}
+
+#detalhes-turismo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+
+    & #descricao-turismo {
+        width: 40%;
+        font-size: large;
+        filter: drop-shadow(2px 2px 2px black);
+    }
+
+    & img {
+        max-width: 900px;
+        margin-right: 3vw;
+    }
+}
