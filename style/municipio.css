@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background-color: #c5bb64;
+    background-color: #ece179;
     color: #2A4562;
     font-family: 'riffic', sans-serif;
     padding-top: 1vw;
@@ -14,6 +14,7 @@ body {
 #ifpe {
     display: flex;
     align-items: center;
+    height: 9vh;
     margin-left: 9vh;
 
     & #texto {
@@ -30,26 +31,73 @@ body {
     }
 }
 
+#introducao{
+    display: flex;
+    background-color: #2A4562;
+    flex-direction: row-reverse;
+    color: #ece179;
+    height: 80vh;
+
+    & #bandeira{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        & img{
+            width: 80%;
+            border-radius: 10px;
+            filter: drop-shadow(2px 2px 2px black);
+        }
+    }
+
+    & #descricaoCidade{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        
+
+        & #nome{
+            font-size: 50px;
+            filter: drop-shadow(2px 2px 2px black);
+            margin-bottom: 2vh;
+        }
+
+        & #introducaoCidade{
+            width: 70%;
+            text-align: center;
+            filter: drop-shadow(2px 2px 2px black);
+            letter-spacing: 1px;
+        }
+    }
+}
+
 #detalhes {
     display: flex;
     justify-content: space-between;
     margin-top: 5vh;
     margin-left: 10vh;
     margin-bottom: 5vh;
+    
 
     & #descricao {
         width: 40%;
         font-size: large;
+        padding-right: 3vh;
     }
 
     & img {
         margin-right: 3vw;
+        border-radius: 10px;
+        filter: drop-shadow(2px 2px 2px black);
     }
 }
 
 #pontos-turisticos {
     background-color: #2A4562;
-    color: #c5bb64;
+    color: #ece179;
     padding-top: 5vh;
     padding-left: 10vh;
 
@@ -63,6 +111,7 @@ body {
     justify-content: space-between;
     margin-top: 5vh;
     padding-bottom: 5vh;
+    padding-right: 3vh;
 
     & #descricao-turismo {
         width: 40%;
@@ -73,5 +122,7 @@ body {
     & img {
         max-width: 900px;
         margin-right: 3vw;
+        border-radius: 10px;
+        filter: drop-shadow(2px 2px 2px black);
     }
 }
