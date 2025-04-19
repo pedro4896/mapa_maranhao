@@ -40,6 +40,16 @@ body {
     & #descricao {
         width: 40%;
         font-size: large;
+
+        & #nome-bandeira{
+            display: flex;
+            align-items: center;
+
+            img{
+                margin-right: 10px;
+                max-width: 150px;
+            }
+        }
     }
 
     & img {
