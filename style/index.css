@@ -41,7 +41,7 @@ body{
 #tooltip {
 	position: absolute;
 	background-color: #1e1e1e;
-	color: #ece179;;
+	color: #ece179;
 	z-index: 10000;
 	padding: 6px 10px;
 	border-radius: 6px;
