@@ -45,7 +45,7 @@ body {
         width: 50%;
 
         & img{
-            width: 80%;
+            max-width: 900px;
             border-radius: 10px;
             filter: drop-shadow(2px 2px 2px black);
         }
@@ -89,6 +89,7 @@ body {
     }
 
     & img {
+        max-width: 900px;
         margin-right: 3vw;
         border-radius: 10px;
         filter: drop-shadow(2px 2px 2px black);
@@ -119,7 +120,7 @@ body {
         filter: drop-shadow(2px 2px 2px black);
     }
 
-    & img {
+    img {
         max-width: 900px;
         margin-right: 3vw;
         border-radius: 10px;
