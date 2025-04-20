@@ -44,8 +44,8 @@ body{
 .fil5 {fill:#ECECEB}
 
 .clickable-municipality {
-    /*fill:#F6EAD9;*/
-	fill: #ece179;
+    fill:#F6EAD9;
+	/*fill: #F6EAD9;*/
 	stroke: #131516;
 	stroke-width: 200;
     transition: fill 0.3s;
@@ -60,7 +60,7 @@ body{
 #tooltip {
 	position: absolute;
 	background-color: #1e1e1e;
-	color: #ece179;
+	color: #F6EAD9;
 	z-index: 10000;
 	padding: 6px 10px;
 	border-radius: 6px;
@@ -111,7 +111,7 @@ body{
 			margin-bottom: 20vh;
 	
 			& #texto{
-				color: #ece179;
+				color: #F6EAD9;
 				text-transform: uppercase;
 				font-size: 14px;
 				letter-spacing: 2px;
@@ -128,7 +128,7 @@ body{
 		}
 		& #textos{
 			& #titulo{
-				color: #ece179;
+				color: #F6EAD9;
 				font-weight: bold;
 				text-transform: uppercase;
 				font-size: 50px;
@@ -138,7 +138,7 @@ body{
 			}
 		
 			& #subtitulo{
-				color: #ece179;
+				color: #F6EAD9;
 				text-transform: uppercase;
 				font-size: 14px;
 				letter-spacing: 2px;
