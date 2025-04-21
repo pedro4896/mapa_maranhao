@@ -86,6 +86,8 @@ body{
 	flex-direction: row-reverse;
 	justify-content: center;
 	align-items: center;
+	height: 100vh;
+	width: auto;
 
 
 	& #container-svg{
