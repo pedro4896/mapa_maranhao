@@ -33,7 +33,7 @@ a {
     & #logo {
         & img {
             width: 7vh;
-            filter: drop-shadow(2px 2px 2px black);
+            filter: drop-shadow(1px 1px 1px black);
         }
     }
 }
@@ -52,7 +52,7 @@ a {
         width: 50%;
 
         & img{
-            max-width: 900px;
+            width: 80%;
             border-radius: 10px;
             filter: drop-shadow(2px 2px 2px black);
         }
@@ -92,11 +92,10 @@ a {
     & #descricao {
         width: 40%;
         font-size: large;
-        padding-right: 3vh;
+        padding-right: 6vh;
     }
 
     & img {
-        max-width: 900px;
         margin-right: 3vw;
         border-radius: 10px;
         filter: drop-shadow(2px 2px 2px black);
@@ -124,10 +123,11 @@ a {
     & #descricao-turismo {
         width: 40%;
         font-size: large;
+        padding-right: 6vh;
         filter: drop-shadow(2px 2px 2px black);
     }
 
-    img {
+    & img {
         max-width: 900px;
         margin-right: 3vw;
         border-radius: 10px;
