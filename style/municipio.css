@@ -53,6 +53,8 @@ a {
 
         & img{
             width: 80%;
+            height: auto;
+            max-height: 80%;
             border-radius: 10px;
             filter: drop-shadow(2px 2px 2px black);
         }
@@ -96,6 +98,10 @@ a {
     }
 
     & img {
+        width: 40%;
+        height: 30%;
+        max-height: 80%;
+        max-width: 80%;
         margin-right: 3vw;
         border-radius: 10px;
         filter: drop-shadow(2px 2px 2px black);
@@ -128,7 +134,10 @@ a {
     }
 
     & img {
-        max-width: 900px;
+        width: 40%;
+        height: 30%;
+        max-height: 80%;
+        max-width: 80%;
         margin-right: 3vw;
         border-radius: 10px;
         filter: drop-shadow(2px 2px 2px black);
