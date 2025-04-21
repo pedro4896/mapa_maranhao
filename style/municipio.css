@@ -11,11 +11,18 @@ body {
     padding-top: 1vw;
 }
 
+a {
+    text-decoration: none;
+    color: #2A4562;
+    width: fit-content;
+}
+
 #ifpe {
     display: flex;
     align-items: center;
     height: 9vh;
     margin-left: 9vh;
+    margin-bottom: 1vh;
 
     & #texto {
         text-transform: uppercase;
