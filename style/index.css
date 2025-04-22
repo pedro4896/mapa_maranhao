@@ -27,6 +27,15 @@ body{
 	animation: fadeIn 1.5s ease-in;
 }
 
+@keyframes destaque {
+    0%, 100% {
+		opacity: 1;
+	  }
+	  50% {
+		opacity: 0.6;
+	  }
+  }
+
 .str0 {stroke:#72706F;stroke-width:76;stroke-linecap:round;stroke-linejoin:round}
 .str4 {stroke:#C2C1C1;stroke-width:76}
 .str2 {stroke:#131516;stroke-width:76;stroke-linecap:round;stroke-linejoin:round}
@@ -39,18 +48,16 @@ body{
 .fil4 {fill:#FFFFFF}
 .fil0 {fill:#9DBDDD}
 .fil1 {fill:#EEDDB3}
-.fil2 {fill:#F6EAD9}
+.fil2 {fill:#FFFFFF}
 .fil6 {fill:#D82B40}
 .fil5 {fill:#ECECEB}
 
 .clickable-municipality {
-    fill:#F6EAD9;
-	/*fill: #F6EAD9;*/
+    fill:#FFFFFF;
 	stroke: #131516;
 	stroke-width: 200;
     transition: fill 0.3s;
     cursor: pointer;
-
 }
 
 .clickable-municipality:hover {
@@ -60,7 +67,7 @@ body{
 #tooltip {
 	position: absolute;
 	background-color: #1e1e1e;
-	color: #F6EAD9;
+	color: #FFFFFF;
 	z-index: 10000;
 	padding: 6px 10px;
 	border-radius: 6px;
@@ -113,7 +120,7 @@ body{
 			margin-bottom: 20vh;
 	
 			& #texto{
-				color: #F6EAD9;
+				color: #FFFFFF;
 				text-transform: uppercase;
 				font-size: 14px;
 				letter-spacing: 2px;
@@ -129,8 +136,9 @@ body{
 
 		}
 		& #textos{
+			margin-bottom: 2vh;
 			& #titulo{
-				color: #F6EAD9;
+				color: #FFFFFF;
 				font-weight: bold;
 				text-transform: uppercase;
 				font-size: 50px;
@@ -140,12 +148,66 @@ body{
 			}
 		
 			& #subtitulo{
-				color: #F6EAD9;
+				color: #FFFFFF;
 				text-transform: uppercase;
 				font-size: 14px;
 				letter-spacing: 2px;
 				filter: drop-shadow(2px 2px 2px black);
 			}
 		}
+
+		& #selecao{
+			display: flex;
+			justify-content: start;
+			align-items: center;
+			height: 5vh;
+			font-family: 'riffic', sans-serif;
+			letter-spacing: 1px;
+
+			& input{
+				color: #2A4562;
+				border-radius: 5px;
+				padding: 0;
+				padding-left: 10px;
+				height: 100%;
+				width: 20vw;
+				margin-right: 1vh;
+				font-family: 'riffic', sans-serif;
+				letter-spacing: 1px;
+				background-color: #FFFFFF;
+				filter: drop-shadow(2px 2px 2px black);
+				outline: none;
+			}
+
+			& input::placeholder{
+				color: #2A4562;
+			}
+
+			& button{
+				color: #2A4562;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+				height: 100%;
+				width: 10vw;
+				font-family: 'riffic', sans-serif;
+				letter-spacing: 1px;
+				cursor: pointer;
+				filter: drop-shadow(2px 2px 2px black);
+			}
+
+			& button:hover{
+				filter: none;
+			}
+
+			& datalist{
+				background-color: #9DBDDD;
+			}
+
+		}
 	}
+}
+
+.destaque{
+	fill: #2A4562;
+	animation: destaque 1.5s ease-in infinite;
 }
