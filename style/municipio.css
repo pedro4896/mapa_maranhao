@@ -5,10 +5,11 @@
 
 body {
     margin: 0;
-    background-color: #F6EAD9;
+    background-color: #FFFFFF;
     color: #2A4562;
     font-family: 'riffic', sans-serif;
     padding-top: 1vw;
+    letter-spacing: 1px;
 }
 
 a {
@@ -42,7 +43,7 @@ a {
     display: flex;
     background-color: #2A4562;
     flex-direction: row-reverse;
-    color: #F6EAD9;
+    color: #FFFFFF;
     height: 80vh;
 
     & #bandeira{
@@ -110,7 +111,7 @@ a {
 
 #pontos-turisticos {
     background-color: #2A4562;
-    color: #F6EAD9;
+    color: #FFFFFF;
     padding-top: 5vh;
     padding-left: 10vh;
 
