@@ -29,6 +29,8 @@ async function alimentaDados() {
     }
 }
 
+window.addEventListener("DOMContentLoaded", alimentaDados); // executa a funçao alimentaDados ao carregar o html da pagina
+
 // Evento de seleção digitada
 input.addEventListener('input', () => {
   // Remove a classe destaque de todos os elementos que estejam com ela no momento
@@ -51,8 +53,6 @@ botaoLimpar.addEventListener('click', () => {
   input.value = ''; // limpar o campo de pesquisa
   document.querySelectorAll('.destaque').forEach(el => el.classList.remove('destaque')); // Remove a classe destaque de todos os elementos que estejam com ela no momento
 });
-
-window.addEventListener("DOMContentLoaded", alimentaDados); // executa a funçao alimentaDados ao carregar o html da pagina
 
 //executa uma ação imediatamente antes da página ser descarregada (ou seja, ao recarregar, fechar ou navegar para outro link)
 window.addEventListener("beforeunload", () => {
@@ -80,32 +80,28 @@ document.querySelectorAll('.clickable-municipality').forEach(path => {
         const nomeNormalizado = normalizarNome(nomeOriginal); // Passa esse nome para uma função normalizarNome()
         // Redireciona o usuário para a página correspondente ao município clicado, usando o nome normalizado no caminho da URL
         window.location.href = `./municipios/${nomeNormalizado}.html`;
-    });    
-});
+    });
+    
+    const tooltip = document.getElementById('tooltip'); // Obtém a div com id="tooltip"
+    path.addEventListener('mouseenter', () => {
+      const title = path.getAttribute('data-nome'); // pega o nome do município
+      path.setAttribute('data-title', title); // salva esse valor em outro atributo (backup)
+      path.removeAttribute('title');          // remove o título nativo do navegador
+      tooltip.innerText = title; // define o texto da tooltip personalizada
+      tooltip.style.opacity = 1; // exibe a tooltip personalizada
+    });
 
-const tooltip = document.getElementById('tooltip'); // Obtém a div com id="tooltip"
-const paths = document.getElementsByClassName('clickable-municipality') // Seleciona todos os elementos com a classe .clickable-municipality
+    // quando o mouse sai da area do municipio
+    path.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = 0; // esconde a tooltip personalizada
+    });
 
-for (const path of paths) {
-  // quando o mouse esta sobre o municipio
-  path.addEventListener('mouseenter', () => {
-    const title = path.getAttribute('data-nome'); // pega o nome do município
-    path.setAttribute('data-title', title); // salva esse valor em outro atributo (backup)
-    path.removeAttribute('title');          // remove o título nativo do navegador
-    tooltip.innerText = title; // define o texto da tooltip personalizada
-    tooltip.style.opacity = 1; // exibe a tooltip personalizada
+
+  // Atualiza a posição do tooltip com base no mouse, em qualquer lugar da tela
+  document.addEventListener('mousemove', (e) => {
+    if (tooltip.style.opacity === "1") { // Verifica se a tooltip está visível (ou seja, foi ativada no mouseenter)
+      tooltip.style.left = e.pageX + 15 + 'px'; // adiciona 15px na coordenada X do mouse
+      tooltip.style.top = e.pageY + 15 + 'px'; // adiciona 15px na coordenada Y do mouse
+    }
   });
-
-  // quando o mouse sai da area do municipio
-  path.addEventListener('mouseleave', () => {
-    tooltip.style.opacity = 0; // esconde a tooltip personalizada
-  });
-}
-
-// Atualiza a posição do tooltip com base no mouse, em qualquer lugar da tela
-document.addEventListener('mousemove', (e) => {
-  if (tooltip.style.opacity === "1") { // Verifica se a tooltip está visível (ou seja, foi ativada no mouseenter)
-    tooltip.style.left = e.pageX + 15 + 'px'; // adiciona 15px na coordenada X do mouse
-    tooltip.style.top = e.pageY + 15 + 'px'; // adiciona 15px na coordenada Y do mouse
-  }
 });
