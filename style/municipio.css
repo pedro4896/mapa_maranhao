@@ -4,43 +4,43 @@
 }
 
 body {
-    margin: 0;
-    background-color: #FFFFFF;
+    margin: 0; /*remove a margem padrao do navegadpr ao redor da pagina, deixando o conteudo encostado nas bordas*/
+    background-color: #FFFFFF; 
     color: #2A4562;
     font-family: 'riffic', sans-serif;
-    padding-top: 1vw;
-    letter-spacing: 1px;
+    padding-top: 1vw;/*adiciona um epaço no topo da pagina, 1% na largura da janela, o vw significa que o padding é responsivo*/
+    letter-spacing: 1px; /*espaçamento entre as letras*/
 }
 
 a {
-    text-decoration: none;
-    color: #2A4562;
-    width: fit-content;
+    text-decoration: none;  /*tira o sublinhado do links*/
+    color: #2A4562; /*define a cor deles para esse azul*/
+    width: fit-content; /*ajusta ao tamamho do texto dentro deles*/
 }
 
 #ifpe {
-    display: flex;
-    align-items: center;
-    height: 9vh;
-    margin-left: 9vh;
-    margin-bottom: 1vh;
+    display: flex; /*permite fazer um alinhamento mais flexivel*/
+    align-items: center; /*alinha verticlmente os itens no centro*/
+    height: 9vh; /*define a altura da loho para 9% da altura visivel da tela*/
+    margin-left: 9vh; /*adiciona uma margem de 9vh, afasta o elementoum pouco da borda esquerda*/
+    margin-bottom: 1vh; /*adicona uma margem inferior de 1% da altura da tela*/
 
-    & #texto {
-        text-transform: uppercase;
-        font-size: 14px;
-        letter-spacing: 2px;
+    & #texto {  /*o & usado para referenciar o seletor do elemento atual onde ele está. Ou seja, ele permite escrever regras de forma mias compacta sem precisar repetir o seletor completo*/
+        text-transform: uppercase;  /*deixa maiusuclo*/
+        font-size: 14px; /*tamanho da fonte*/
+        letter-spacing: 2px; /*espacamento das letras*/
     }
 
     & #logo {
         & img {
-            width: 7vh;
-            filter: drop-shadow(1px 1px 1px black);
+            width: 7vh; /*define  largura da imagem dentro da logo como 7% da altura da tela*/
+            filter: drop-shadow(1px 1px 1px black); /*aplica uma sombra levemente deslocada para a direita e para baixo e com um leve desfoque, na cor preta*/
         }
     }
 }
 
 #introducao{
-    display: flex;
+    display: flex; 
     background-color: #2A4562;
     flex-direction: row-reverse;
     color: #FFFFFF;

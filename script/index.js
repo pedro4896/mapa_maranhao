@@ -1,11 +1,11 @@
-const datalist = document.getElementById('lista-municipios'); // referencia do datalist
-const input = document.getElementById('input-municipio'); // referencia do input
-const botaoLimpar = document.getElementById('btn-limpar'); // referenci do botão
+const datalist = document.getElementById('lista-municipios'); // referencia do datalist acessando o elemento html que tem oo id, e vai guardar a referencia dele na datalist
+const input = document.getElementById('input-municipio'); // referencia do input, ele pega o que o usuario digitar e guarda na variavel input
+const botaoLimpar = document.getElementById('btn-limpar'); // referenci do botão, ele acessa o elemento como id, e guarda a referenccia na variavel
 
-async function alimentaDados() {
-    try {
-      const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/21/municipios'); // faz a requisição a API do IBGE
-      const municipios = await response.json(); // transforma a requisão em JSON
+async function alimentaDados() { ///o asyn define uma função assincrona chamada alimenta dados
+    try { //inicia um bloco de tratamento de erro, o que esta dentro será tentado, e se der erro o controle vai para o catch
+      const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/21/municipios'); // faz a requisição a API do IBGE que retorna os municipios com codigo 21, ou seja, maranhao
+      const municipios = await response.json(); // transforma a requisão em JSON, uma lista de objetos de municípios, usa o await poois o json é uma operação asincroca, e ai ele armazena o resultado (array) na variavel municipios
 
 
       municipios.forEach(mun => {
@@ -13,13 +13,13 @@ async function alimentaDados() {
         const nome = mun.nome; // armazena nome do municipio
 
         // Alimentação da datalist
-        const option = document.createElement('option'); // cria o elemento option
-        option.value = nome; // seta o nome do municipio no atributo value
-        option.setAttribute('data-id', codigo); // cria o atributo do codigo e seta o codigo do municipio nele
+        const option = document.createElement('option'); // cria dinamicamente o elemento option
+        option.value = nome; // seta o nome do municipio no atributo value, oq o usuario verá e poderá selecionar
+        option.setAttribute('data-id', codigo); // cria o atributo do codigo e seta o codigo do municipio nele, permite identificar o municipio selecionado deppis, mesmo que o nome seja igual a outro
         datalist.appendChild(option); // adiciona o elemento option no datalist
 
         //atribuição de atributo nome ao path do svg correspondente ao municipio
-        const elemento = document.getElementById(`mun_${codigo}`); //retorna o elemento que tem o id correponde ao codigo
+        const elemento = document.getElementById(`mun_${codigo}`); //retorna o elemento que tem o id correponde ao codigo no svg
         if (elemento) { // verifica se o elemento existe
           elemento.setAttribute('data-nome', nome); // atribui o nome ao elemento
         }
