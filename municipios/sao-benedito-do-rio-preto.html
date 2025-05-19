@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style/municipio.css" />
+  <!-- Link da foto da bandeira -->
+  <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon" />
+  <title>São Benedito do Rio Preto</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <a href="/index.html" id="ifpe">
+        <div id="logo"><img src="../img/ifpe_logoAzul.svg" alt="Logo IFPE" /></div>
+        <div id="texto">Engenharia de<br />Software</div>
+      </a>
+    </div>
+  </header>
+
+  <div id="introducao">
+    <!-- Foto da bandeira -->
+    <div id="bandeira">
+      <img src="data:image/png;base64,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" alt="Bandeira de São Benedito do Rio Preto" />
+    </div>
+
+    <div id="descricaoCidade">
+      <!-- Nome da cidade -->
+      <div id="nome">São Benedito do Rio Preto</div>
+      <!-- Descrição da cidade -->
+      <div id="introducaoCidade">
+        São Benedito do Rio Preto é um município localizado no norte do estado do Maranhão, com uma população estimada de aproximadamente 18 mil habitantes. É conhecido pela forte tradição religiosa e belezas naturais da região.
+      </div>
+    </div>
+  </div>
+
+  <div id="detalhes">
+    <div id="descricao">
+      <h1>São Benedito do Rio Preto</h1>
+      <p>
+        O município foi fundado oficialmente em 1952 e possui uma rica herança cultural e religiosa. A cidade é banhada por rios e cercada por vegetação típica do norte maranhense, o que proporciona paisagens naturais encantadoras.<br><br>
+        A festa do padroeiro, São Benedito, é um dos maiores eventos religiosos da cidade e atrai visitantes de toda a região. A cidade também possui um comércio local ativo e é polo de serviços para os municípios vizinhos.
+      </p>
+    </div>
+    <!-- Foto da cidade -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Centro_de_SBRP.jpg" alt="Vista da cidade de São Benedito do Rio Preto" />
+  </div>
+
+  <div id="pontos-turisticos">
+    <h1>Pontos Turísticos</h1>
+
+    <div id="detalhes-turismo">
+      <div id="descricao-turismo">
+        <h2>Igreja de São Benedito</h2>
+        <p>
+          A Igreja de São Benedito é o principal símbolo religioso da cidade. Com arquitetura simples e tradicional, ela abriga missas, novenas e as comemorações do padroeiro, sendo um ponto de encontro da comunidade local.
+        </p>
+      </div>
+      <img src="https://bispado.org.br/wp-content/uploads/2019/12/Par%C3%B3quia-S.-Benedito-RP-1.jpg" alt="Igreja de São Benedito" />
+    </div>
+
+    <hr />
+
+    <div id="detalhes-turismo">
+      <div id="descricao-turismo">
+        <h2>Rio Preto</h2>
+        <p>
+          O Rio Preto corta a cidade e é muito utilizado para lazer e pesca pela população. Suas margens são frequentadas por moradores e visitantes em busca de tranquilidade e contato com a natureza.
+        </p>
+      </div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsIhAnsJU0YoINOyJtodvhDF1vB7L3lamOLg&s" alt="Rio Preto em São Benedito do Rio Preto" />
+    </div>
+  </div>
+
+</body>
+
+</html>
