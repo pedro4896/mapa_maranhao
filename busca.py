@@ -243,4 +243,4 @@ extras = [f for f in arquivos_encontrados if f not in arquivos_esperados]
 #print('Arquivos esperados:', arquivos_esperados)
 #print('Arquivos encontrados:', arquivos_encontrados)
 print('Arquivos faltando:', faltando)
-#print('Arquivos extras:', extras)
+print('Arquivos extras:', extras)
