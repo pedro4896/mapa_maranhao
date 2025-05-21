@@ -80,8 +80,7 @@ document.querySelectorAll('.clickable-municipality').forEach(path => {
         const nomeNormalizado = normalizarNome(nomeOriginal); // Passa esse nome para uma função normalizarNome()
         // Redireciona o usuário para a página correspondente ao município clicado, usando o nome normalizado no caminho da URL
         window.location.href = `./municipios/${nomeNormalizado}.html`;
-    });
-    
+    });    
     const tooltip = document.getElementById('tooltip'); // Obtém a div com id="tooltip"
     path.addEventListener('mouseenter', () => {
       const title = path.getAttribute('data-nome'); // pega o nome do município
@@ -90,13 +89,10 @@ document.querySelectorAll('.clickable-municipality').forEach(path => {
       tooltip.innerText = title; // define o texto da tooltip personalizada
       tooltip.style.opacity = 1; // exibe a tooltip personalizada
     });
-
     // quando o mouse sai da area do municipio
     path.addEventListener('mouseleave', () => {
       tooltip.style.opacity = 0; // esconde a tooltip personalizada
     });
-
-
   // Atualiza a posição do tooltip com base no mouse, em qualquer lugar da tela
   document.addEventListener('mousemove', (e) => {
     if (tooltip.style.opacity === "1") { // Verifica se a tooltip está visível (ou seja, foi ativada no mouseenter)
